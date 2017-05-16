@@ -1,6 +1,4 @@
-# hc-water-quality
-
-> A Vue.js project
+# Hillsborough County Water Quality Project
 
 ## Build Setup
 

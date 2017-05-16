@@ -6,8 +6,9 @@
 		</div>
 
 		<form @submit.prevent="findAddress()">
+			<!-- <label for="address_input">Find Your Water System</label> -->
 			<div class="input-group form-group">
-				<input v-model="address_input" class="form-control" placeholder="Your Address..." autocomplete="off" required="">
+				<input v-model="address_input" id="address_input" class="form-control" placeholder="Your Address..." autocomplete="off" required="">
 				<span class="input-group-btn">
 					<button class="btn btn-info" type="submit">Find</button>
 				</span>
@@ -92,6 +93,8 @@ export default {
 		findAddress () {
 			// console.log('searching')
 			this.alerts = []
+			this.service_area = null
+			this.sublayer = null
 
 			esriLoader.dojoRequire([
 				"esri/tasks/Locator"
