@@ -18,10 +18,15 @@
 		<alert v-for="alert in alerts" :item="alert" :key="alert.id"></alert>
 
 		<p v-if="sublayer" class="text-center lead">
-			This address is in the <strong class="text-info"><em>{{ sublayer.areaName }}</em></strong> Water System<br>
-			<small>
-				View the <a :href="sublayer.pdfLink" target="_blank">Water Quality Report</a>
-			</small>
+			This address is in the
+			<strong class="text-info">
+				<em>
+					<a :href="sublayer.pdfLink" target="_blank" title="View the Water Quality Report">
+						{{ sublayer.areaName }}
+					</a>
+				</em>
+			</strong>
+			Water System
 		</p>
 
 		<hr>
