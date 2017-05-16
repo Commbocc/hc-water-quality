@@ -10,9 +10,8 @@
 
 		<div v-html="item.text"></div>
 
-		<footer v-if="item.footer_txt" class="small">
-			{{ item.footer_txt }}
-		</footer>
+		<footer v-if="item.footer_txt" class="small" v-html="item.footer_txt"></footer>
+		
 	</div>
 </template>
 

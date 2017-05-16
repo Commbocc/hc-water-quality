@@ -47,11 +47,25 @@ export default {
 			address_geo: null,
 
 			service_area: null,
-			sublayer: null
+			sublayer: null,
+
+			areas_checked: 0
 		}
 	},
 	components: {
 		'alert': Alert
+	},
+	watch: {
+		'areas_checked': function() {
+			if (this.areas_checked === window.wqSublayers.length && !this.sublayer) {
+				this.alerts.push({
+					class: 'alert-warning',
+					title: 'No Water Information for this Address',
+					text: 'Perhaps you are not a Hillsborough County Water customer.',
+					footer_txt: 'If you feel this is incorrect, please contact <a href="http://hillsboroughcounty.org/en/government/departments/public-utilities">Public Utilities</a> (813) 272-5977.'
+				})
+			}
+		}
 	},
 	methods: {
 		initMap () {
@@ -95,6 +109,7 @@ export default {
 			this.alerts = []
 			this.service_area = null
 			this.sublayer = null
+			this.areas_checked = 0
 
 			esriLoader.dojoRequire([
 				"esri/tasks/Locator"
@@ -115,7 +130,8 @@ export default {
 					this.alerts.push({
 						class: 'alert-warning',
 						title: 'Address Not Found',
-						text: 'Please confirm the address and search again. If you feel this is an error, please contact the <a href="http://hcflgov.net/government/departments/customer">Customer Service Center</a>.'
+						text: 'Please confirm the address and search again.',
+						footer_txt: 'If you feel this is an error, please contact the <a href="http://hcflgov.net/government/departments/customer">Customer Service Center</a>.'
 					})
 				})
 			})
@@ -136,7 +152,9 @@ export default {
 							this.service_area = response.features[0]
 							this.sublayer = sublayer
 						}
+						this.areas_checked += 1
 					})
+					return sublayer
 				})
 
 			})
