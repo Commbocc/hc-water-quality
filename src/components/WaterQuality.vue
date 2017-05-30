@@ -1,5 +1,5 @@
 <template>
-	<div class="hello">
+	<div>
 
 		<div class="embed-responsive embed-responsive-16by9 thumbnail">
 			<div id="mapDiv" class="embed-responsive-item"></div>
@@ -157,7 +157,7 @@ export default {
 							this.service_area = response.features[0]
 							this.sublayer = sublayer
 						}
-						this.areas_checked += 1
+						this.areas_checked++
 					})
 					return sublayer
 				})
@@ -165,15 +165,8 @@ export default {
 			})
 		}
 	},
-	mounted () {
-		if (!esriLoader.isLoaded()) {
-			esriLoader.bootstrap((err) => {
-				if (err) { console.error(err) }
-				this.initMap()
-			}, {
-				url: 'https://js.arcgis.com/4.3'
-			})
-		}
+	beforeMount () {
+		this.initMap()
 	}
 }
 </script>
