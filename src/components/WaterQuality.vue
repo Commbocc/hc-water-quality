@@ -165,8 +165,15 @@ export default {
 			})
 		}
 	},
-	beforeMount () {
-		this.initMap()
+	mounted () {
+		if (!esriLoader.isLoaded()) {
+			esriLoader.bootstrap((err) => {
+				if (err) { console.error(err) }
+				this.initMap()
+			}, {
+				url: 'https://js.arcgis.com/4.3'
+			})
+		}
 	}
 }
 </script>
