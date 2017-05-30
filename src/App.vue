@@ -14,7 +14,7 @@ export default {
 			esriLoader.bootstrap((err) => {
 				if (err) { console.error(err) }
 			}, {
-				url: 'https://js.arcgis.com/4.0'
+				url: 'https://js.arcgis.com/4.3'
 			})
 		}
 	}
@@ -22,5 +22,5 @@ export default {
 </script>
 
 <style>
-@import url('https://js.arcgis.com/4.0/esri/css/main.css');
+@import url('https://js.arcgis.com/4.3/esri/css/main.css');
 </style>
