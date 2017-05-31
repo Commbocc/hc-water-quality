@@ -83,14 +83,13 @@ export default {
 			esriLoader.dojoRequire([
 				"esri/WebMap",
 				"esri/views/MapView",
-				"esri/layers/MapImageLayer",
-				"dojo/domReady!"
+				"esri/layers/MapImageLayer"
 			], (WebMap, MapView, MapImageLayer) => {
 				this.webmap = new WebMap({
 					portalItem: {
 						id: "b51fb4e76e154e1b93b630eac3ea94ae"
 					}
-				});
+				})
 
 				this.mapview = new MapView({
 					container: "mapDiv",
@@ -113,7 +112,7 @@ export default {
 				})
 
 				this.webmap.add(this.map_layer)
-			})
+			});
 		},
 		findAddress () {
 			// console.log('searching')
