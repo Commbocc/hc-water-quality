@@ -2,7 +2,13 @@
 	<div>
 
 		<div class="embed-responsive embed-responsive-16by9 thumbnail">
-			<div id="mapDiv" class="embed-responsive-item"></div>
+			<div id="mapDiv" class="embed-responsive-item">
+				<p class="h3 text-center caption">
+					The application was unable to load...
+					<br>
+					<small>Try refreshing the page. If you're using Internet Explorer, consider using a <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank">different browser</a>.</small>
+				</p>
+			</div>
 		</div>
 
 		<form @submit.prevent="findAddress()">
