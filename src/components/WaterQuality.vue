@@ -1,14 +1,8 @@
 <template>
 	<div>
 
-		<div class="embed-responsive embed-responsive-16by9 thumbnail">
-			<div id="mapDiv" class="embed-responsive-item">
-				<p class="h3 text-center caption">
-					The application was unable to load...
-					<br>
-					<small>Try refreshing the page. If you're using Internet Explorer, consider using a <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank">different browser</a>.</small>
-				</p>
-			</div>
+		<div v-show="webmap" class="embed-responsive embed-responsive-16by9 thumbnail">
+			<div id="mapDiv" class="embed-responsive-item"></div>
 		</div>
 
 		<form @submit.prevent="findAddress()">
@@ -42,7 +36,7 @@
 
 <script>
 import * as esriLoader from 'esri-loader'
-import Alert from '@/components/Alert';
+import Alert from '@/components/Alert'
 
 export default {
 	name: 'address-form',
@@ -99,7 +93,6 @@ export default {
 				var subLayerArr = window.wqSublayers.map( (subLayer) => {
 					subLayer.opacity = 0.65
 					subLayer.popupTemplate = {
-						// title: "{Potable_Water_System}",
 						title: subLayer.areaName,
 						content: '<a href="'+subLayer.pdfLink+'" target="_blank">Water Quality Report</a>'
 					}
@@ -144,7 +137,7 @@ export default {
 						footer_txt: 'If you feel this is an error, please contact the <a href="http://hcflgov.net/government/departments/customer">Customer Service Center</a>.'
 					})
 				})
-			})
+			});
 		},
 		findServiceArea () {
 			esriLoader.dojoRequire([
@@ -166,17 +159,24 @@ export default {
 					})
 					return sublayer
 				})
-
-			})
+			});
 		}
 	},
 	mounted () {
-		if (!esriLoader.isLoaded()) {
-			esriLoader.bootstrap((err) => {
-				if (err) { console.error(err) }
-				this.initMap()
-			}, {
-				url: 'https://js.arcgis.com/4.3'
+		try {
+			if (!esriLoader.isLoaded()) {
+				esriLoader.bootstrap((err) => {
+					if (err) { console.error(err); return; }
+					this.initMap()
+				}, {
+					url: 'https://js.arcgis.com/4.3'
+				})
+			}
+		} catch (err) {
+			this.alerts.push({
+				class: 'alert-warning',
+				title: 'The application failed to load in its entirety...',
+				text: 'Try refreshing the page. If you\'re using Internet Explorer, consider using a <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank">different browser</a>.',
 			})
 		}
 	}
