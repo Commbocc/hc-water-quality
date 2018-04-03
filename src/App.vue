@@ -1,14 +1,19 @@
 <template>
 	<div id="HcWaterQuality">
-		<router-view></router-view>
+
+    <div is="WaterQuality"></div>
+
 	</div>
 </template>
 
 <script>
-import * as esriLoader from 'esri-loader'
+import WaterQuality from '@/components/WaterQuality'
 
 export default {
-	name: 'HcWaterQuality'
+	name: 'HcWaterQuality',
+  components: {
+    WaterQuality
+  }
 }
 </script>
 
