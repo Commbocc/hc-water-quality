@@ -11,7 +11,9 @@
     "push-gh": "git subtree push --prefix dist github gh-pages"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "esri-loader": "^1.7.0",
+    "esri-portal-map": "git+https://github.com/Commbocc/esri-portal-map.git",
     "vue": "^2.5.16"
   },
   "devDependencies": {
