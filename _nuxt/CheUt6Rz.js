@@ -1,1 +1,0 @@
-import{O as i,em as p}from"./XTiWLC6H.js";import{a}from"./BaEkUq14.js";import"./CEOtNdJQ.js";import"./CYEurO12.js";import"./Bih7MQxJ.js";import"./Bm-X0Xz1.js";import"./CQuTPb9g.js";import"./Blu9Ckm7.js";async function w(o,t,r){const m=i(o);return(await a(m,p.from(t),{...r})).data.count}export{w as executeForTopCount};
