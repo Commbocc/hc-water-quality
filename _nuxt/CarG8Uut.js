@@ -1,7 +1,0 @@
-import{A as a,E as n,a8 as d,bi as u,ah as l}from"./BggqJDft.js";import{X as g}from"./C15I1p1O.js";import"./DUHSl2LR.js";import"./CDvRZ9Ud.js";import"./BCHmOBHu.js";import"./C14Q9bsB.js";import"./CYMvjYBC.js";import"./CO8Oq-SV.js";import"./BXo9SgwA.js";import"./C-McJ6PS.js";import"./9uhYMgf-.js";import"./eo8OaSOB.js";import"./BRqP_wXA.js";import"./BldL2Olo.js";import"./BbhkZNmz.js";import"./CQuTPb9g.js";import"./CUzevAry.js";import"./Df3R4XWy.js";import"./BelVAuKG.js";import"./BOD-G50G.js";import"./BmZEZMMh.js";import"./Dh8xK1L1.js";import"./D5zmR9t2.js";import"./DD4Mzkvp.js";import"./CpXW3Q5t.js";import"./wWRBg9hv.js";import"./B6CTbX1X.js";import"./MDUrh2eL.js";import"./DewAb69I.js";import"./Blu9Ckm7.js";import"./B7X19rIS.js";import"./N9KpnGvm.js";import"./DVJCm8QA.js";import"./DqOPm0bZ.js";import"./BZQ-7d8A.js";import"./DZ5C6FQv.js";import"./DYFmUbb9.js";import"./BRA4mAE6.js";let i=class extends g{initialize(){this.addHandles([d(()=>this.view.scale,()=>this._update(),u)],"constructor")}isUpdating(){const t=this.layer.sublayers.some(s=>s.renderer!=null),r=this._commandsQueue.updateTracking.updating,o=this._updatingRequiredFieldsPromise!=null,p=!this._worker,m=this.dataUpdating,e=t&&(r||o||p||m);return l("esri-2d-log-updating")&&console.log(`Updating FLV2D: ${e}
-  -> hasRenderer ${t}
-  -> hasPendingCommand ${r}
-  -> updatingRequiredFields ${o}
-  -> updatingProxy ${p}
-  -> updatingPipeline ${m}
-`),e}};i=a([n("esri.views.2d.layers.SubtypeGroupLayerView2D")],i);const Y=i;export{Y as default};

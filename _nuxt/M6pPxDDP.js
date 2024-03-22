@@ -1,1 +1,0 @@
-import{O as t}from"./B2geD71G.js";import"./DBZZQeS4.js";import"./BggqJDft.js";import"./DUHSl2LR.js";import"./Wa8cmqdu.js";function a(r){return(0,t[r.operation])(...r.parameters)}export{a as executeGEOperation};
