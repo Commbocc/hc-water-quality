@@ -14,7 +14,7 @@ const featureLayer = new FeatureLayer({
       color: [0, 0, 255, 0.5],
       outline: {
         color: [0, 0, 0, 1],
-        width: "1px",
+        width: "3px",
       },
     },
   },
@@ -42,7 +42,7 @@ function lookupReportUrl(key: PotableWaterSystem) {
     case "City Of Tampa":
       return `https://www.tampagov.net/water/info/water-quality`;
     case "City Of Temple Terrace":
-      return `https://www.tampagov.net/water/info/water-quality`;
+      return `https://www.templeterrace.gov/190/Water-Sewer`;
     case "Cypress Cove":
       return `https://hcfl.gov/assets/bltdc989db216b2eaa2/file`;
     case "Eastlake":
