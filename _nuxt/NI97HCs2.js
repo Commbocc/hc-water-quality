@@ -1,0 +1,7 @@
+import{A as a,E as n,a8 as d,bi as u,ah as l}from"./CukAC_1P.js";import{X as g}from"./BD2eb-Dk.js";import"./DM0ti_i1.js";import"./Dgx-naUR.js";import"./B-uWLkD4.js";import"./C14Q9bsB.js";import"./CYMvjYBC.js";import"./DPy8uR7v.js";import"./C0X2MNtY.js";import"./DFGqz2IQ.js";import"./DdRxNREp.js";import"./DCEkgwgJ.js";import"./BRqP_wXA.js";import"./-cFESF4c.js";import"./DQif3r2u.js";import"./CQuTPb9g.js";import"./CUzevAry.js";import"./Dpt-fyOU.js";import"./BL4to7nM.js";import"./BOD-G50G.js";import"./BmZEZMMh.js";import"./xjrXkfGN.js";import"./D5zmR9t2.js";import"./BXJBP4KC.js";import"./DwTk23Mn.js";import"./DqWY3ROA.js";import"./B6CTbX1X.js";import"./MDUrh2eL.js";import"./TFEmdpdJ.js";import"./Blu9Ckm7.js";import"./B7X19rIS.js";import"./CHyhrbI_.js";import"./Bxip98-Q.js";import"./hHBwLuz6.js";import"./CXoY2_b0.js";import"./DZ5C6FQv.js";import"./BRrS_sB6.js";import"./CpjEMZBC.js";let i=class extends g{initialize(){this.addHandles([d(()=>this.view.scale,()=>this._update(),u)],"constructor")}isUpdating(){const t=this.layer.sublayers.some(s=>s.renderer!=null),r=this._commandsQueue.updateTracking.updating,o=this._updatingRequiredFieldsPromise!=null,p=!this._worker,m=this.dataUpdating,e=t&&(r||o||p||m);return l("esri-2d-log-updating")&&console.log(`Updating FLV2D: ${e}
+  -> hasRenderer ${t}
+  -> hasPendingCommand ${r}
+  -> updatingRequiredFields ${o}
+  -> updatingProxy ${p}
+  -> updatingPipeline ${m}
+`),e}};i=a([n("esri.views.2d.layers.SubtypeGroupLayerView2D")],i);const Y=i;export{Y as default};
