@@ -35,38 +35,24 @@ const featureLayer = new FeatureLayer({
   },
 });
 
-function lookupReportUrl(key: PotableWaterSystem) {
-  switch (key) {
-    case "City Of Plant City":
-      return `https://www.plantcitygov.com/util-operations/page/annual-drinking-water-quality-reports`;
-    case "City Of Tampa":
-      return `https://www.tampagov.net/water/info/water-quality`;
-    case "City Of Temple Terrace":
-      return `https://www.templeterrace.gov/190/Water-Sewer`;
-    case "Cypress Cove":
-      return `https://hcfl.gov/assets/bltdc989db216b2eaa2/file`;
-    case "Eastlake":
-      return `https://hcfl.gov/assets/blt054f0df7f6ccc31e/file`;
-    case "Fairview MHP":
-      return `https://hcfl.gov/assets/bltfd2965e553a3b5a7/file`;
-    case "Hershel Heights":
-      return `https://hcfl.gov/assets/bltd3d11989d1118f56/file`;
-    case "Northwest":
-      return `https://hcfl.gov/assets/bltc0b4205a15c30b0f/file`;
-    case "Oakview Estates":
-      return `https://hcfl.gov/assets/blt7eba2d206c479062/file`;
-    case "Pebble Creek":
-      return `https://hcfl.gov/assets/blt9b2ad1e2709e73b4/file`;
-    case "San Remo":
-      return `https://hcfl.gov/assets/blt889d1f32714fe394/file`;
-    case "Seaboard":
-      return `https://hcfl.gov/assets/bltd18b4019aa3cde87/file`;
-    case "South-Central":
-      return `https://hcfl.gov/assets/blt57f9322bed97a650/file`;
-
-    default:
-      return undefined;
-  }
+function lookupReportUrl(key: PotableWaterSystem): string {
+  return {
+    "City Of Plant City":
+      "https://www.plantcitygov.com/util-operations/page/annual-drinking-water-quality-reports",
+    "City Of Tampa": `https://www.tampagov.net/water/info/water-quality`,
+    "City Of Temple Terrace": `https://www.templeterrace.gov/190/Water-Sewer`,
+    "Cypress Cove": `https://hcfl.gov/assets/bltdc989db216b2eaa2/file`,
+    "East Lake": `https://hcfl.gov/assets/blt054f0df7f6ccc31e/file`,
+    "Fairview MHP": `https://hcfl.gov/assets/bltfd2965e553a3b5a7/file`,
+    "Hershel Heights": `https://hcfl.gov/assets/bltd3d11989d1118f56/file`,
+    Northwest: `https://hcfl.gov/assets/bltc0b4205a15c30b0f/file`,
+    "Oakview Estates": `https://hcfl.gov/assets/blt7eba2d206c479062/file`,
+    "Pebble Creek": `https://hcfl.gov/assets/blt9b2ad1e2709e73b4/file`,
+    "San Remo": `https://hcfl.gov/assets/blt889d1f32714fe394/file`,
+    Seaboard: `https://hcfl.gov/assets/bltd18b4019aa3cde87/file`,
+    "South-Central": `https://hcfl.gov/assets/blt57f9322bed97a650/file`,
+    Windemere: `https://hcfl.gov/assets/blt1a2450a881d17e07/file`,
+  }[key];
 }
 
 function mapReady(map: __esri.WebMap) {

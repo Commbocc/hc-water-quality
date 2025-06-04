@@ -7,7 +7,7 @@ type PotableWaterSystem =
   | "City Of Tampa"
   | "City Of Temple Terrace"
   | "Cypress Cove"
-  | "Eastlake"
+  | "East Lake"
   | "Fairview MHP"
   | "Hershel Heights"
   | "Northwest"
@@ -15,4 +15,5 @@ type PotableWaterSystem =
   | "Pebble Creek"
   | "San Remo"
   | "Seaboard"
-  | "South-Central";
+  | "South-Central"
+  | "Windemere";
